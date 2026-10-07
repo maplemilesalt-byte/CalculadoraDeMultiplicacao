@@ -1,0 +1,16 @@
+GraphicsWindow.DrawText(20, 10, "Digite o primeiro número:")
+PRIMEIRO = Controls.AddTextBox(20, 35)
+GraphicsWindow.DrawText(20, 70, "Digite o segundo número:")
+SEGUNDO = Controls.AddTextBox(20, 95)
+BOTAO = Controls.AddButton("Multiplicar", 20, 130)
+Controls.ButtonClicked = CALCULAR
+Sub CALCULAR
+A = Controls.GetTextBoxText(PRIMEIRO)
+B = Controls.GetTextBoxText(SEGUNDO)
+RESULTADO = A * B
+GraphicsWindow.Title = "Calculadora de Multiplicação"
+GraphicsWindow.DrawText(20, 180, "RESULTADO = " + RESULTADO)
+GraphicsWindow.Width = 300
+GraphicsWindow.Height = 200
+GraphicsWindow.Show()
+EndSub
